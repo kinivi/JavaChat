@@ -8,6 +8,16 @@ public class ClientWindow extends JFrame{
     private static final int WIDTH = 600;
     private static final int HEIGHT =470;
     public static void main(String[] args) {
-
+        SwingUtilities.invokeLater(ClientWindow::new);
     }
+
+    private ClientWindow() {
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(WIDTH,HEIGHT);
+        setAlwaysOnTop(true);
+        setLocationRelativeTo(null);
+
+        setVisible(true);
+    }
+
 }
