@@ -11,6 +11,7 @@ public class ClientWindow extends JFrame{
         SwingUtilities.invokeLater(ClientWindow::new);
     }
 
+    private final JTextArea log = new JTextArea();
     private ClientWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH,HEIGHT);
