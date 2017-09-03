@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ChatServer implements TCPConnectionListener{
-    public final Logger LOGGER = Logger.getLogger(ChatServer.class.getName());
+    private final Logger LOGGER = Logger.getLogger(ChatServer.class.getName());
 
     public static void main(String[] args) {
         new ChatServer();
@@ -51,6 +51,7 @@ public class ChatServer implements TCPConnectionListener{
     @Override
     public synchronized void onDisconnect(TCPConnection tcpConnection) {
         connections.remove(tcpConnection);
+        sendToAllConnections(tcpConnection.toString()+" disconnected");
     }
 
     @Override
