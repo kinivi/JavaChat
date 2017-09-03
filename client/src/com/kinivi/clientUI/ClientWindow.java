@@ -18,6 +18,7 @@ public class ClientWindow extends JFrame{
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
 
+        log.setEditable(false);
         setVisible(true);
     }
 
