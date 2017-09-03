@@ -12,6 +12,8 @@ public class ClientWindow extends JFrame{
     }
 
     private final JTextArea log = new JTextArea();
+    private final JTextField fieldNickname = new JTextField();
+    private final JTextField fieldInput = new JTextField();
     private ClientWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH,HEIGHT);
